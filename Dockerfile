@@ -9,16 +9,19 @@ RUN apt-get update
 RUN apt-get install -y gettext libgettextpo-dev
 
 # Firstly, copy requirements file
-COPY requirements.txt /app/requirements.txt
+COPY ./requirements.txt ./requirements.txt
 
 # Install requirement packages
 RUN pip install -r requirements.txt
 
+# copy docker-entrypoint.sh
+COPY ./docker-entrypoint.sh ./docker-entrypoint.sh
+
 # Copy all project folders
-COPY . /app
+COPY . .
 
-# Compile .po files
-RUN python manage.py compilemessages -l tr
-RUN python manage.py compilemessages -l en
+# run docker-entrypoint.sh
+ENTRYPOINT ["./docker-entrypoint.sh"]
 
+# Expose port
 EXPOSE 8000
