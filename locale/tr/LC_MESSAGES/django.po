@@ -1,0 +1,203 @@
+# Book Store Turkish Translation File.
+# Copyright (C) 2020 Book Store
+# This file is distributed under the same license as the PACKAGE package.
+# Mücahit Nezir <mucahitnezir@gmail.com>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-30 17:57+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Mücahit Nezir <mucahitnezir@gmail.com>\n"
+"Language-Team: Turkish <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: author/apps.py:7 author/models.py:15 author/models.py:20
+msgid "Author"
+msgstr "Yazar"
+
+#: author/models.py:8 shared/models.py:10
+msgid "Country"
+msgstr "Ülke"
+
+#: author/models.py:9 book/models.py:27 publisher/models.py:8
+msgid "Image"
+msgstr "Görsel"
+
+#: author/models.py:10 book/models.py:12 book/models.py:28
+msgid "Description"
+msgstr "Açıklama"
+
+#: author/models.py:16 book/models.py:22
+msgid "Authors"
+msgstr "Yazarlar"
+
+#: author/models.py:21 author/models.py:28 shared/models.py:27
+msgid "Languages"
+msgstr "Diller"
+
+#: author/models.py:33
+msgid "Translator"
+msgstr "Çevirmen"
+
+#: author/models.py:34 book/models.py:45
+msgid "Translators"
+msgstr "Çevirmenler"
+
+#: book/apps.py:7 book/models.py:34 book/models.py:39
+msgid "Book"
+msgstr "Kitap"
+
+#: book/models.py:17
+msgid "Category"
+msgstr "Kategori"
+
+#: book/models.py:18 book/models.py:23
+msgid "Categories"
+msgstr "Kategoriler"
+
+#: book/models.py:24 publisher/apps.py:7 publisher/models.py:13
+msgid "Publisher"
+msgstr "Yayın Evi"
+
+#: book/models.py:25
+msgid "List Price"
+msgstr "Liste Fiyatı"
+
+#: book/models.py:26
+msgid "Sale Price"
+msgstr "Satış Fiyatı"
+
+#: book/models.py:29
+msgid "On Sale"
+msgstr "Satışı devam ediyor mu"
+
+#: book/models.py:35
+msgid "Books"
+msgstr "Kitaplar"
+
+#: book/models.py:40
+msgid "ISBN"
+msgstr ""
+
+#: book/models.py:41
+msgid "Number of Pages"
+msgstr "Sayfa Sayısı"
+
+#: book/models.py:42
+msgid "Number of Prints"
+msgstr "Baskı Sayısı"
+
+#: book/models.py:43
+msgid "Release Date"
+msgstr "Yayın Tarihi"
+
+#: book/models.py:44 shared/models.py:18
+msgid "Dimension"
+msgstr "Ölçü"
+
+#: book/models.py:49 book/models.py:50
+msgid "Book Meta"
+msgstr ""
+
+#: common/admin.py:20
+msgid "Detail"
+msgstr "Detay"
+
+#: common/admin.py:23
+msgid "Actions"
+msgstr "İşlemler"
+
+#: common/models.py:6
+msgid "Created at"
+msgstr "Oluşturulma Tarihi"
+
+#: common/models.py:7
+msgid "Updated at"
+msgstr "Güncellenme Tarihi"
+
+#: common/models.py:14
+msgid "Name"
+msgstr "Ad"
+
+#: common/models.py:25
+msgid "Slug"
+msgstr ""
+
+#: publisher/models.py:14
+msgid "Publishers"
+msgstr "Yayın Evleri"
+
+#: shared/apps.py:7
+msgid "Shared"
+msgstr ""
+
+#: shared/models.py:11
+msgid "Countries"
+msgstr "Ülkeler"
+
+#: shared/models.py:19
+msgid "Dimensions"
+msgstr "Ölçüler"
+
+#: shared/models.py:26
+msgid "Language"
+msgstr "Dil"
+
+#: user/admin.py:23
+msgid "Personal info"
+msgstr "Kişisel Bilgiler"
+
+#: user/admin.py:24
+msgid "Permissions"
+msgstr "Yetkiler"
+
+#: user/admin.py:25
+msgid "Important dates"
+msgstr "Önemli Tarihler"
+
+#: user/apps.py:7 user/models.py:31
+msgid "User"
+msgstr "Kullanıcı"
+
+#: user/models.py:9
+msgid "email address"
+msgstr "Eposta Adresi"
+
+#: user/models.py:10
+msgid "Email confirmed"
+msgstr "Eposta Onayı"
+
+#: user/models.py:11
+msgid "Phone Number"
+msgstr "Telefon Numarası"
+
+#: user/models.py:12
+msgid "Phone confirmed"
+msgstr "Telefon Onayı"
+
+#: user/models.py:28
+msgid "Male"
+msgstr "Erkek"
+
+#: user/models.py:29
+msgid "Female"
+msgstr "Kadın"
+
+#: user/models.py:32
+msgid "Birth Date"
+msgstr "Doğum Tarihi"
+
+#: user/models.py:33
+msgid "Gender"
+msgstr "Cinsiyet"
+
+#: user/models.py:37 user/models.py:38
+msgid "User Profile"
+msgstr "Kullanıcı Profili"
