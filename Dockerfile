@@ -26,6 +26,9 @@ COPY ./docker-entrypoint.sh ./docker-entrypoint.sh
 # Copy all project folders
 COPY . .
 
+# Install npm packages
+RUN npm install
+
 # run docker-entrypoint.sh
 ENTRYPOINT ["./docker-entrypoint.sh"]
 
