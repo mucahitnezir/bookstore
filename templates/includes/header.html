@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark {% if not title %}mb-4{% endif %}">
+  <div class="container">
+    <a class="navbar-brand" href="{% url 'landing:home' %}">Bookstore</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'author:index' %}">Authors</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'publisher:index' %}">Publishers</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

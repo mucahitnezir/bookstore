@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 from django.utils.translation import ugettext_lazy as _
 
 from common.models import BaseModelWithSlug, BaseModel
@@ -15,10 +16,17 @@ class Author(BaseModelWithSlug):
         verbose_name = _('Author')
         verbose_name_plural = _('Authors')
 
+    def get_absolute_url(self):
+        return reverse('author:detail', kwargs={'slug': self.slug})
+
 
 class Translator(BaseModel):
     author = models.ForeignKey(Author, models.CASCADE, verbose_name=_('Author'))
     languages = models.ManyToManyField('shared.Language', verbose_name=_('Languages'))
+
+    @property
+    def name(self):
+        return self.author.name
 
     @property
     def language_names(self):

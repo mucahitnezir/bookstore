@@ -121,6 +121,11 @@ LOCALE_PATHS = os.path.join(BASE_DIR, 'locale'),
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'node_modules'),
+)
+
 AWS_IS_GZIPPED = True
 AWS_DEFAULT_ACL = 'public-read'
 AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400'}

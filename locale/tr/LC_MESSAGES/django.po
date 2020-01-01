@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-30 17:57+0300\n"
+"POT-Creation-Date: 2020-01-02 00:26+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Mücahit Nezir <mucahitnezir@gmail.com>\n"
 "Language-Team: Turkish <LL@li.org>\n"
@@ -18,91 +18,92 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: author/apps.py:7 author/models.py:15 author/models.py:20
+#: author/apps.py:7 author/models.py:16 author/models.py:24
 msgid "Author"
 msgstr "Yazar"
 
-#: author/models.py:8 shared/models.py:10
+#: author/models.py:9 shared/models.py:10
 msgid "Country"
 msgstr "Ülke"
 
-#: author/models.py:9 book/models.py:27 publisher/models.py:8
+#: author/models.py:10 book/models.py:28 publisher/models.py:9
 msgid "Image"
 msgstr "Görsel"
 
-#: author/models.py:10 book/models.py:12 book/models.py:28
+#: author/models.py:11 book/models.py:13 book/models.py:29
 msgid "Description"
 msgstr "Açıklama"
 
-#: author/models.py:16 book/models.py:22
+#: author/models.py:17 author/views.py:14 book/models.py:23
 msgid "Authors"
 msgstr "Yazarlar"
 
-#: author/models.py:21 author/models.py:28 shared/models.py:27
+#: author/models.py:25 author/models.py:36 shared/models.py:27
 msgid "Languages"
 msgstr "Diller"
 
-#: author/models.py:33
+#: author/models.py:41
 msgid "Translator"
 msgstr "Çevirmen"
 
-#: author/models.py:34 book/models.py:45
+#: author/models.py:42 book/models.py:57
 msgid "Translators"
 msgstr "Çevirmenler"
 
-#: book/apps.py:7 book/models.py:34 book/models.py:39
+#: book/apps.py:7 book/models.py:43 book/models.py:51
 msgid "Book"
 msgstr "Kitap"
 
-#: book/models.py:17
+#: book/models.py:18
 msgid "Category"
 msgstr "Kategori"
 
-#: book/models.py:18 book/models.py:23
+#: book/models.py:19 book/models.py:24
 msgid "Categories"
 msgstr "Kategoriler"
 
-#: book/models.py:24 publisher/apps.py:7 publisher/models.py:13
+#: book/models.py:25 publisher/apps.py:7 publisher/models.py:14
 msgid "Publisher"
 msgstr "Yayın Evi"
 
-#: book/models.py:25
+#: book/models.py:26
 msgid "List Price"
 msgstr "Liste Fiyatı"
 
-#: book/models.py:26
+#: book/models.py:27
 msgid "Sale Price"
 msgstr "Satış Fiyatı"
 
-#: book/models.py:29
+#: book/models.py:30
 msgid "On Sale"
 msgstr "Satışı devam ediyor mu"
 
-#: book/models.py:35
+#: book/models.py:44
 msgid "Books"
 msgstr "Kitaplar"
 
-#: book/models.py:40
+#: book/models.py:52 templates/book/includes/book-detail-card.html:14
 msgid "ISBN"
 msgstr ""
 
-#: book/models.py:41
+#: book/models.py:53 templates/book/includes/book-detail-card.html:20
 msgid "Number of Pages"
 msgstr "Sayfa Sayısı"
 
-#: book/models.py:42
+#: book/models.py:54 templates/book/includes/book-detail-card.html:32
 msgid "Number of Prints"
 msgstr "Baskı Sayısı"
 
-#: book/models.py:43
+#: book/models.py:55 templates/book/includes/book-detail-card.html:38
 msgid "Release Date"
 msgstr "Yayın Tarihi"
 
-#: book/models.py:44 shared/models.py:18
+#: book/models.py:56 shared/models.py:18
+#: templates/book/includes/book-detail-card.html:26
 msgid "Dimension"
 msgstr "Ölçü"
 
-#: book/models.py:49 book/models.py:50
+#: book/models.py:61 book/models.py:62
 msgid "Book Meta"
 msgstr ""
 
@@ -130,7 +131,7 @@ msgstr "Ad"
 msgid "Slug"
 msgstr ""
 
-#: publisher/models.py:14
+#: publisher/models.py:15 publisher/views.py:13
 msgid "Publishers"
 msgstr "Yayın Evleri"
 
@@ -149,6 +150,58 @@ msgstr "Ölçüler"
 #: shared/models.py:26
 msgid "Language"
 msgstr "Dil"
+
+#: templates/author/detail.html:39
+msgid "There is no book for this author."
+msgstr "Bu yazara ait kitap bulunmamaktadır."
+
+#: templates/author/list.html:18
+msgid "No author found."
+msgstr "Herhangi bir yazar bulunamadı."
+
+#: templates/book/detail.html:31
+msgid "Book Description"
+msgstr "Kitap Açıklaması"
+
+#: templates/book/detail.html:36
+msgid "There is no description for this book."
+msgstr "Bu kitap için içerik henüz girilmedi."
+
+#: templates/book/includes/book-detail-card.html:45
+msgid "Translator(s)"
+msgstr "Çevirmen(ler)"
+
+#: templates/includes/footer.html:6
+msgid "All rights reserved"
+msgstr "Tüm hakları saklıdır"
+
+#: templates/includes/pagination.html:10
+msgid "First"
+msgstr "İlk"
+
+#: templates/includes/pagination.html:15
+msgid "Previous"
+msgstr "Önceki"
+
+#: templates/includes/pagination.html:30
+msgid "Next"
+msgstr "Sonraki"
+
+#: templates/includes/pagination.html:35
+msgid "Last"
+msgstr "Son"
+
+#: templates/landing/home.html:7
+msgid "Homepage of book store"
+msgstr "Mağaza anasayfası"
+
+#: templates/publisher/detail.html:30
+msgid "There is no book for this publisher."
+msgstr "Bu yayın evine ait kitap bulunmamaktadır."
+
+#: templates/publisher/list.html:18
+msgid "No publisher found."
+msgstr "Herhangi bir yayın evi bulunamadı."
 
 #: user/admin.py:23
 msgid "Personal info"

@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{% block title %}{{ title|default:'Bookstore' }} | Bookstore{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'bootstrap/dist/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+</head>
+<body class="bg-light">
+{% include 'includes/header.html' %}
+
+{% include 'includes/title-default.html' %}
+
+<div class="container mb-4">
+  {% block content %}
+  {% endblock %}
+</div>
+
+{% include 'includes/footer.html' %}
+
+<script src="{% static 'jquery/dist/jquery.min.js' %}"></script>
+<script src="{% static 'popper.js/dist/umd/popper.min.js' %}"></script>
+<script src="{% static 'bootstrap/dist/js/bootstrap.min.js' %}"></script>
+</body>
+</html>

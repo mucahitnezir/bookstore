@@ -1,0 +1,14 @@
+{% load static %}
+
+<div class="card">
+  <a href="{{ object.get_absolute_url }}">
+    {% if object.image %}
+      <img src="{{ object.image.url }}" class="card-img-top" alt="{{ object.name }}">
+    {% else %}
+      <img src="{% static 'img/placeholders/author.png' %}" class="card-img-top" alt="{{ object.name }}">
+    {% endif %}
+  </a>
+  <div class="card-body">
+    <h5 class="card-title mb-0">{{ object.name }}</h5>
+  </div>
+</div>

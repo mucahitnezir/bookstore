@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 from django.utils.translation import ugettext_lazy as _
 
 from mptt.fields import TreeForeignKey
@@ -28,11 +29,22 @@ class Book(BaseModelWithSlug):
     description = models.TextField(_('Description'), blank=True, null=True)
     on_sale = models.BooleanField(_('On Sale'), default=True)
 
+    @property
+    def author(self):
+        return self.authors.first()
+
+    @property
+    def discount_rate(self):
+        return int(100 - (self.sale_price * 100 / self.list_price)) if self.list_price and self.sale_price else None
+
     class Meta:
         db_table = 'books'
         ordering = '-id',
         verbose_name = _('Book')
         verbose_name_plural = _('Books')
+
+    def get_absolute_url(self):
+        return reverse('book:detail', kwargs={'slug': self.slug})
 
 
 class BookMeta(BaseModel):

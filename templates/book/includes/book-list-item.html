@@ -1,0 +1,30 @@
+{% load static %}
+
+<div class="card">
+  <a href="{{ object.get_absolute_url }}">
+    {% if object.image %}
+      <img src="{{ object.image.url }}" class="card-img-top" alt="{{ object.name }}">
+    {% else %}
+      <img src="{% static 'img/placeholders/book.png' %}" class="card-img-top" alt="{{ object.name }}">
+    {% endif %}
+  </a>
+  <div class="card-body">
+    <!--Book name-->
+    <h5 class="card-title mb-1">{{ object.name }}</h5>
+    <!--Author-->
+    <a href="{{ object.author.get_absolute_url }}" class="text-muted d-block">{{ object.author.name }}</a>
+    <!--Publisher-->
+    <a href="{{ object.publisher.get_absolute_url }}" class="text-muted d-block mb-1">{{ object.publisher.name }}</a>
+    <!--Discount-->
+    {% if object.discount_rate %}
+      <div class="d-flex justify-content-between mb-1">
+        <del><i class="fa fa-turkish-lira"></i>{{ object.list_price }}</del>
+        <span>% {{ object.discount_rate }}</span>
+      </div>
+    {% endif %}
+    <!--Sale price and detail button-->
+    <a href="{{ object.get_absolute_url }}" class="btn btn-block btn-success">
+      <i class="fa fa-turkish-lira"></i> {{ object.sale_price }}
+    </a>
+  </div>
+</div>

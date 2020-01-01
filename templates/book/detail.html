@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% load i18n static %}
+
+{% block content %}
+  <div class="row">
+    <!--Left Area-->
+    <div class="col-md-3">
+      <!--Image-->
+      {% if object.image %}
+        <img src="{{ object.image.url }}" alt="{{ object.name }}" class="img-thumbnail">
+      {% else %}
+        <img src="{% static 'img/placeholders/book.png' %}" alt="{{ object.name }}" class="img-thumbnail">
+      {% endif %}
+    </div>
+    <!--Content-->
+    <div class="col-md-5">
+      <!--Authors-->
+      <div class="d-block">
+        <i class="fa fa-user-circle text-muted text-center mr-1" style="width: 16px"></i>
+        {% for author in object.authors.all %}
+          <a href="{{ author.get_absolute_url }}" class="text-muted">{{ author.name }}</a>{% if not forloop.last %}, {% endif %}
+        {% endfor %}
+      </div>
+      <!--Publisher-->
+      <div class="d-block mb-4">
+        <i class="fa fa-building text-muted text-center mr-1" style="width: 16px"></i>
+        <a href="{{ object.publisher.get_absolute_url }}" class="text-muted">{{ object.publisher.name }}</a>
+      </div>
+      <!--Description-->
+      <h2 class="h4">{% trans 'Book Description' %}</h2>
+      {% if object.description %}
+        <p class="text-justify">{{ object.description }}</p>
+      {% else %}
+        <div class="alert alert-warning">
+          {% trans 'There is no description for this book.' %}
+        </div>
+      {% endif %}
+    </div>
+    <!--Right Area-->
+    <div class="col-md-4">
+      <!--Price and add to card button-->
+      {% include 'book/includes/book-price.html' %}
+      <!--Book details card-->
+      {% include 'book/includes/book-detail-card.html' %}
+    </div>
+  </div>
+{% endblock %}

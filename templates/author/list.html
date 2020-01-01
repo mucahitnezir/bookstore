@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% load i18n %}
+
+{% block content %}
+  {% if object_list|length > 0 %}
+    <div class="row">
+      {% for object in object_list %}
+        <div class="col-md-3 mb-4">
+          {% include 'author/includes/author-list-item.html' %}
+        </div>
+      {% endfor %}
+    </div>
+
+    {% include 'includes/pagination.html' %}
+  {% else %}
+    <div class="alert alert-warning">
+      {% trans 'No author found.' %}
+    </div>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,54 @@
+{% load i18n %}
+
+<div class="text-muted text-center mb-3 border-top border-bottom py-2">
+  {% for category in object.categories.all %}
+    <a href="#" class="text-muted">{{ category.name }}</a>{% if not forloop.last %}, {% endif %}
+  {% endfor %}
+</div>
+
+<div class="card bg-white">
+  <div class="card-body">
+    <ul class="list-unstyled mb-0">
+      {% if object.bookmeta.isbn %}
+        <li class="d-flex flex-wrap justify-content-between">
+          <b>{% trans 'ISBN' %}</b>
+          {{ object.bookmeta.isbn }}
+        </li>
+      {% endif %}
+      {% if object.bookmeta.number_of_pages %}
+        <li class="d-flex flex-wrap justify-content-between">
+          <b>{% trans 'Number of Pages' %}</b>
+          {{ object.bookmeta.number_of_pages }}
+        </li>
+      {% endif %}
+      {% if object.bookmeta.dimension %}
+        <li class="d-flex justify-content-between">
+          <b>{% trans 'Dimension' %}</b>
+          {{ object.bookmeta.dimension }}
+        </li>
+      {% endif %}
+      {% if object.bookmeta.number_of_prints %}
+        <li class="d-flex justify-content-between">
+          <b>{% trans 'Number of Prints' %}</b>
+          {{ object.bookmeta.number_of_prints }}
+        </li>
+      {% endif %}
+      {% if object.bookmeta.release_date %}
+        <li class="d-flex justify-content-between">
+          <b>{% trans 'Release Date' %}</b>
+          {{ object.bookmeta.release_date }}
+        </li>
+      {% endif %}
+      {% with translators=object.bookmeta.translators.all %}
+        {% if translators|length > 0 %}
+          <li class="d-flex justify-content-between align-items-center">
+            <b>{% trans 'Translator(s)' %}</b>
+            {% for translator in translators %}
+              {{ translator.name }}
+            {% endfor %}
+          </li>
+        {% endif %}
+      {% endwith %}
+    </ul>
+  </div>
+</div>

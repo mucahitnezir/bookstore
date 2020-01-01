@@ -1,8 +1,12 @@
 from django.conf import settings
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 urlpatterns = [
+    path('', include('landing.urls')),
+    path('authors/', include('author.urls')),
+    path('books/', include('book.urls')),
+    path('publishers/', include('publisher.urls')),
     path('admin/', admin.site.urls),
 ]
 
