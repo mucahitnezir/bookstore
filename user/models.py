@@ -21,6 +21,10 @@ class User(BaseModel, AbstractUser):
     class Meta(AbstractUser.Meta):
         db_table = 'users'
 
+    def save(self, *args, **kwargs):
+        self.username = self.email if not self.username else self.username
+        super().save(*args, **kwargs)
+
     def __str__(self):
         return self.fullname
 

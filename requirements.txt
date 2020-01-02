@@ -2,6 +2,7 @@ asgiref==3.2.3
 boto3==1.10.45
 botocore==1.13.45
 Django==3.0.1
+django-crispy-forms==1.8.1
 django-environ==0.4.5
 django-mptt==0.10.0
 django-polymorphic==2.1.2

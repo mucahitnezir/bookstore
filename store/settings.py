@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Third Party
     'mptt',
+    'crispy_forms',
     # My Apps
     'shared',
     'user',
@@ -153,7 +154,15 @@ ADMIN_SITE_HEADER = 'Book Store'
 
 AUTH_USER_MODEL = 'user.User'
 
+LOGIN_REDIRECT_URL = 'landing:home'
+LOGOUT_REDIRECT_URL = 'auth:login'
+
 AUTHENTICATION_BACKENDS = (
     'user.backends.EmailBackend',
     'django.contrib.auth.backends.ModelBackend',
 )
+
+# Crispy Forms
+# https://django-crispy-forms.readthedocs.io/en/latest/install.html
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
