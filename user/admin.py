@@ -2,8 +2,10 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.utils.translation import ugettext_lazy as _
 
+from polymorphic.admin import PolymorphicChildModelAdmin, PolymorphicParentModelAdmin
+
 from common.admin import BaseModelAdmin
-from .models import User, Profile, Address
+from .models import User, Profile, Address, IndividualAddress, CorporateAddress
 
 
 class ProfileAdmin(admin.StackedInline):
@@ -26,11 +28,23 @@ class UserAdmin(BaseModelAdmin, BaseUserAdmin):
     )
 
 
-@admin.register(Address)
-class AddressAdmin(BaseModelAdmin):
-    list_display = 'user', 'province', 'district', 'zip_code', 'type'
-    list_filter = 'type', 'province', 'district'
-    search_fields = 'user__first_name', 'user__last_name'
+class BaseChildAddressModelAdmin(PolymorphicChildModelAdmin):
+    base_model = Address
 
-    def get_queryset(self, request):
-        return Address.objects.filter(editable=True)
+
+@admin.register(IndividualAddress)
+class IndividualProviderAdmin(BaseChildAddressModelAdmin):
+    pass
+
+
+@admin.register(CorporateAddress)
+class CorporateAddressAdmin(BaseChildAddressModelAdmin):
+    pass
+
+
+@admin.register(Address)
+class ProviderAdmin(BaseModelAdmin, PolymorphicParentModelAdmin):
+    base_model = Address
+    child_models = (IndividualAddress, CorporateAddress)
+    list_display = 'user', 'province', 'district', 'polymorphic_ctype', 'phone'
+    search_fields = 'user__first_name', 'user__last_name'

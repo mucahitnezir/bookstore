@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-02 00:29+0300\n"
+"POT-Creation-Date: 2020-01-02 13:36+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Mücahit Nezir <mucahitnezir@gmail.com>\n"
 "Language-Team: English <LL@li.org>\n"
@@ -30,7 +30,7 @@ msgstr ""
 msgid "Image"
 msgstr ""
 
-#: author/models.py:11 book/models.py:13 book/models.py:29
+#: author/models.py:11 book/models.py:13 book/models.py:29 user/models.py:52
 msgid "Description"
 msgstr ""
 
@@ -131,6 +131,22 @@ msgstr ""
 msgid "Slug"
 msgstr ""
 
+#: location/models.py:11 location/models.py:16 user/models.py:50
+msgid "Province"
+msgstr ""
+
+#: location/models.py:12
+msgid "Provinces"
+msgstr ""
+
+#: location/models.py:21 user/models.py:51
+msgid "District"
+msgstr ""
+
+#: location/models.py:22
+msgid "Districts"
+msgstr ""
+
 #: publisher/models.py:15 publisher/views.py:13
 msgid "Publishers"
 msgstr ""
@@ -203,54 +219,106 @@ msgstr ""
 msgid "No publisher found."
 msgstr ""
 
-#: user/admin.py:23
+#: user/admin.py:25
 msgid "Personal info"
 msgstr ""
 
-#: user/admin.py:24
+#: user/admin.py:26
 msgid "Permissions"
 msgstr ""
 
-#: user/admin.py:25
+#: user/admin.py:27
 msgid "Important dates"
 msgstr ""
 
-#: user/apps.py:7 user/models.py:31
+#: user/apps.py:7 user/models.py:34 user/models.py:48
 msgid "User"
 msgstr ""
 
-#: user/models.py:9
+#: user/models.py:12
 msgid "email address"
 msgstr ""
 
-#: user/models.py:10
+#: user/models.py:13
 msgid "Email confirmed"
 msgstr ""
 
-#: user/models.py:11
+#: user/models.py:14 user/models.py:49
 msgid "Phone Number"
 msgstr ""
 
-#: user/models.py:12
+#: user/models.py:15
 msgid "Phone confirmed"
 msgstr ""
 
-#: user/models.py:28
+#: user/models.py:31
 msgid "Male"
 msgstr ""
 
-#: user/models.py:29
+#: user/models.py:32
 msgid "Female"
 msgstr ""
 
-#: user/models.py:32
+#: user/models.py:35
 msgid "Birth Date"
 msgstr ""
 
-#: user/models.py:33
+#: user/models.py:36
 msgid "Gender"
 msgstr ""
 
-#: user/models.py:37 user/models.py:38
+#: user/models.py:40 user/models.py:41
 msgid "User Profile"
+msgstr ""
+
+#: user/models.py:53
+msgid "Is Editable"
+msgstr ""
+
+#: user/models.py:58
+msgid "Address"
+msgstr ""
+
+#: user/models.py:59
+msgid "Addresses"
+msgstr ""
+
+#: user/models.py:63
+msgid "This district does not match the selected province."
+msgstr ""
+
+#: user/models.py:67
+msgid "first name"
+msgstr ""
+
+#: user/models.py:68
+msgid "last name"
+msgstr ""
+
+#: user/models.py:72
+msgid "Individual Address"
+msgstr ""
+
+#: user/models.py:73
+msgid "Individual Addresses"
+msgstr ""
+
+#: user/models.py:77
+msgid "Company Name"
+msgstr ""
+
+#: user/models.py:78
+msgid "Tax Room"
+msgstr ""
+
+#: user/models.py:79
+msgid "Tax Number"
+msgstr ""
+
+#: user/models.py:83
+msgid "Corporate Address"
+msgstr ""
+
+#: user/models.py:84
+msgid "Corporate Addresses"
 msgstr ""

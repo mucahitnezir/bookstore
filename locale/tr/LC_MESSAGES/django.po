@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-02 00:26+0300\n"
+"POT-Creation-Date: 2020-01-02 13:36+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Mücahit Nezir <mucahitnezir@gmail.com>\n"
 "Language-Team: Turkish <LL@li.org>\n"
@@ -30,7 +30,7 @@ msgstr "Ülke"
 msgid "Image"
 msgstr "Görsel"
 
-#: author/models.py:11 book/models.py:13 book/models.py:29
+#: author/models.py:11 book/models.py:13 book/models.py:29 user/models.py:52
 msgid "Description"
 msgstr "Açıklama"
 
@@ -131,6 +131,22 @@ msgstr "Ad"
 msgid "Slug"
 msgstr ""
 
+#: location/models.py:11 location/models.py:16 user/models.py:50
+msgid "Province"
+msgstr "Şehir"
+
+#: location/models.py:12
+msgid "Provinces"
+msgstr "Şehirler"
+
+#: location/models.py:21 user/models.py:51
+msgid "District"
+msgstr "İlçe"
+
+#: location/models.py:22
+msgid "Districts"
+msgstr "İlçeler"
+
 #: publisher/models.py:15 publisher/views.py:13
 msgid "Publishers"
 msgstr "Yayın Evleri"
@@ -203,54 +219,106 @@ msgstr "Bu yayın evine ait kitap bulunmamaktadır."
 msgid "No publisher found."
 msgstr "Herhangi bir yayın evi bulunamadı."
 
-#: user/admin.py:23
+#: user/admin.py:25
 msgid "Personal info"
 msgstr "Kişisel Bilgiler"
 
-#: user/admin.py:24
+#: user/admin.py:26
 msgid "Permissions"
 msgstr "Yetkiler"
 
-#: user/admin.py:25
+#: user/admin.py:27
 msgid "Important dates"
 msgstr "Önemli Tarihler"
 
-#: user/apps.py:7 user/models.py:31
+#: user/apps.py:7 user/models.py:34 user/models.py:48
 msgid "User"
 msgstr "Kullanıcı"
 
-#: user/models.py:9
+#: user/models.py:12
 msgid "email address"
 msgstr "Eposta Adresi"
 
-#: user/models.py:10
+#: user/models.py:13
 msgid "Email confirmed"
 msgstr "Eposta Onayı"
 
-#: user/models.py:11
+#: user/models.py:14 user/models.py:49
 msgid "Phone Number"
 msgstr "Telefon Numarası"
 
-#: user/models.py:12
+#: user/models.py:15
 msgid "Phone confirmed"
 msgstr "Telefon Onayı"
 
-#: user/models.py:28
+#: user/models.py:31
 msgid "Male"
 msgstr "Erkek"
 
-#: user/models.py:29
+#: user/models.py:32
 msgid "Female"
 msgstr "Kadın"
 
-#: user/models.py:32
+#: user/models.py:35
 msgid "Birth Date"
 msgstr "Doğum Tarihi"
 
-#: user/models.py:33
+#: user/models.py:36
 msgid "Gender"
 msgstr "Cinsiyet"
 
-#: user/models.py:37 user/models.py:38
+#: user/models.py:40 user/models.py:41
 msgid "User Profile"
 msgstr "Kullanıcı Profili"
+
+#: user/models.py:53
+msgid "Is Editable"
+msgstr ""
+
+#: user/models.py:58
+msgid "Address"
+msgstr "Adres"
+
+#: user/models.py:59
+msgid "Addresses"
+msgstr "Adresler"
+
+#: user/models.py:63
+msgid "This district does not match the selected province."
+msgstr "Bu ilçe seçili il ile eşleşmiyor."
+
+#: user/models.py:67
+msgid "first name"
+msgstr "Ad"
+
+#: user/models.py:68
+msgid "last name"
+msgstr "Soyad"
+
+#: user/models.py:72
+msgid "Individual Address"
+msgstr "Bireysel Adres"
+
+#: user/models.py:73
+msgid "Individual Addresses"
+msgstr "Bireysel Adresler"
+
+#: user/models.py:77
+msgid "Company Name"
+msgstr "Şirket Adı"
+
+#: user/models.py:78
+msgid "Tax Room"
+msgstr "Vergi Dairesi"
+
+#: user/models.py:79
+msgid "Tax Number"
+msgstr "Vergi Numarası"
+
+#: user/models.py:83
+msgid "Corporate Address"
+msgstr "Kurumsal Adres"
+
+#: user/models.py:84
+msgid "Corporate Addresses"
+msgstr "Kurumsal Adresler"
